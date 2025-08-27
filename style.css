@@ -1,0 +1,97 @@
+:root{
+  gap:18px;
+  margin-top:20px;
+}
+
+.card{
+  flex:1 1 0;
+  background:var(--card);
+  padding:18px; /* padding increases the inner spacing of the card */
+  border-radius:8px;
+  box-shadow:0 6px 16px rgba(17,24,39,0.06);
+  border:1px solid transparent;
+}
+
+.card h3{margin-top:0}
+
+/* Illustration of changing border */
+.card-bordered{
+  border:6px dashed #fbbf24; /* thicker border increases outside dimension unless box-sizing set */
+}
+
+/* Illustration of margin: moves the element away from siblings */
+.card-margin{
+  margin-top:28px; /* pushes this card lower than the others, showing margin's effect */
+  background:#fff7ed;
+}
+
+.practice{
+  margin-top:28px;
+  padding:18px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,252,0.9));
+}
+
+.demo-form{
+  display:flex;
+  gap:12px;
+  align-items:flex-end;
+  flex-wrap:wrap;
+}
+
+.demo-form label{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  min-width:160px;
+}
+
+.demo-form input{
+  padding:8px 10px; /* inner spacing of inputs */
+  border:2px solid var(--border);
+  border-radius:6px;
+}
+
+.row{
+  display:flex;
+  gap:12px; /* gap is space between flex items (similar to margin but cleaner) */
+  margin-top:16px;
+}
+
+.box{
+  flex:1 1 0;
+  padding:18px; /* inner spacing */
+  text-align:center;
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:6px;
+}
+
+.site-footer{
+  margin-top:24px;
+  padding:18px 0;
+  color:var(--muted);
+}
+
+/* Small screens */
+@media (max-width:720px){
+  .cards{flex-direction:column}
+  .site-header .container{flex-direction:column;gap:12px;align-items:flex-start}
+}
+:root{
+--bg:#f5f8ff;
+--accent:#0b5ed7; /* Nexus branding blue */
+--muted:#495057;
+--card:#ffffff;
+--border:#ced4da;
+}
+
+
+html,body{
+height:100%;
+margin:0;
+font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+background: var(--bg);
+color:#111827;
+}
